@@ -1,13 +1,13 @@
 {% set name = "pygeofilter" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygeofilter-{{ version }}.tar.gz
-  sha256: 265a0a5d47e8421b7f07710d66422e94c4ee2590ce3fad6bd4b61a248e4e816b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pygeofilter-{{ version }}.tar.gz
+  sha256: f92bc0622099f87fe8b36de7abdd86059d615a89ed60822737082223a578e150
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.7
     - dateparser
-    - lark <1.0
+    - lark
     - pygeoif >=1.0.0
     - dataclasses
 
