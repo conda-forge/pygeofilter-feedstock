@@ -1,5 +1,5 @@
 {% set name = "pygeofilter" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pygeofilter-{{ version }}.tar.gz
-  sha256: f92bc0622099f87fe8b36de7abdd86059d615a89ed60822737082223a578e150
+  sha256: 1a8700d303c37ea190a88f9b946d346c4f752850e61b35106c48562192707e10
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - setuptools >=46.4
     - pip
   run:
+    - click
     - python >={{ python_min }}
     - dateparser
     - lark
